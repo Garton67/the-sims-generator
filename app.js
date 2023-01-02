@@ -57,7 +57,7 @@ const girlNames = [
 const secondNames = [
   "Maples",
   "Winchester",
-  "Holkiday",
+  "Holiday",
   "Pearson",
   "Evans",
   "Storey",
@@ -144,3 +144,12 @@ document
   .addEventListener("click", setRandomPetName);
 
 setRandomGirlName();
+
+const svgContainer = document.getElementById("svg");
+const animItem = bodymovin.loadAnimation({
+  wrapper: svgContainer,
+  animType: "svg",
+  loop: false,
+  autoplay: falaaase,
+  path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
+});

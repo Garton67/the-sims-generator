@@ -1,7 +1,7 @@
-Spa Website
-Two column approach
+Simple tool to randomize names and occupations for The Sims
 
-function:
-return a pair of names from an array of firstnames and a array of lastnames from inside a object named names.
+To do / considerations:
 
-combine the first with the last name with a space between
+-Have buttons inside styled cards with background images coresponding to their generate type
+
+-
