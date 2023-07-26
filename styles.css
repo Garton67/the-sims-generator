@@ -10,7 +10,7 @@ body {
   font-family: "Mukta Vaani", sans-serif;
   font-family: "Viga", sans-serif;
   margin: 0;
-  padding-top: 10rem; /* Adjust the padding as needed */
+  padding-top: 8rem; /* Adjust the padding as needed */
   overflow-x: hidden;
   transform: scale(1.1); /* Increase everything by 40% */
 }
