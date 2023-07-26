@@ -73,3 +73,15 @@ lottie-player {
 .emoji {
   font-size: 1.25em;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  body {
+    padding-top: 4rem; /* Adjust the padding as needed for smaller screens */
+    transform: scale(1); /* Reset the scaling for smaller screens */
+  }
+
+  .btn-primary {
+    padding: 0.25em; /* Adjust the padding for smaller screens */
+  }
+}
