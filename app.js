@@ -83,61 +83,37 @@ const petNames = [
   "Toadflax",
 ];
 
-// Random Boy Name
+      const getRandomNumber = (max) => Math.floor(Math.random() * max);
 
-const getRandomNumber = (max) => Math.floor(Math.random() * max);
+      const getRandomName = (namesArray) =>
+        `${namesArray[getRandomNumber(namesArray.length)]} ${
+          secondNames[getRandomNumber(secondNames.length)]
+        }`;
 
-const getRandomBoyName = () =>
-  `${boyNames[getRandomNumber(boyNames.length)]} ${
-    secondNames[getRandomNumber(secondNames.length)]
-  }`;
+      const setRandomName = (name) => {
+        document.getElementById("random-name").innerText = name;
+      };
 
-const setRandomBoyName = () => {
-  document.getElementById("random-name").innerText = getRandomBoyName();
-};
+      document.getElementById("generateBoy").addEventListener("click", () => {
+        const randomBoyName = getRandomName(boyNames);
+        setRandomName(randomBoyName);
+      });
 
-document
-  .getElementById("generateBoy")
-  .addEventListener("click", setRandomBoyName);
+      document.getElementById("generateGirl").addEventListener("click", () => {
+        const randomGirlName = getRandomName(girlNames);
+        setRandomName(randomGirlName);
+      });
 
-setRandomBoyName();
+      document.getElementById("generatePet").addEventListener("click", () => {
+        const randomPetName = getRandomName(petNames);
+        setRandomName(randomPetName);
+      });
 
-// Random Girl Name
-
-const getRandomGirlName = () =>
-  `${girlNames[getRandomNumber(girlNames.length)]} ${
-    secondNames[getRandomNumber(secondNames.length)]
-  }`;
-
-const setRandomGirlName = () => {
-  document.getElementById("random-name").innerText = getRandomGirlName();
-};
-
-document
-  .getElementById("generateGirl")
-  .addEventListener("click", setRandomGirlName);
-
-setRandomGirlName();
-
-// Random Pet Name
-
-const getRandomPetName = () => `${petNames[getRandomNumber(petNames.length)]}`;
-
-const setRandomPetName = () => {
-  document.getElementById("random-name").innerText = getRandomPetName();
-};
-
-document
-  .getElementById("generatePet")
-  .addEventListener("click", setRandomPetName);
-
-setRandomGirlName();
-
-const svgContainer = document.getElementById("svg");
-const animItem = bodymovin.loadAnimation({
-  wrapper: svgContainer,
-  animType: "svg",
-  loop: false,
-  autoplay: false,
-  path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
-});
+      const svgContainer = document.getElementById("svg");
+      const animItem = bodymovin.loadAnimation({
+        wrapper: svgContainer,
+        animType: "svg",
+        loop: false,
+        autoplay: false,
+        path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
+      });
