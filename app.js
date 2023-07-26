@@ -141,69 +141,82 @@ document
 
 // Function to add a name to the list and corresponding array
 function addNameToList(name, type) {
-  const listItem = document.createElement("div");
-  listItem.textContent = name;
+  // Check if the name already exists in the corresponding array
+  const nameExists =
+    type === "Girl"
+      ? girlNames.includes(name)
+      : type === "Boy"
+      ? boyNames.includes(name)
+      : type === "Pet"
+      ? petNames.includes(name)
+      : false;
 
-  // Add the new name to the corresponding array
-  switch (type) {
-    case "Girl":
-      girlNames.push(name);
-      break;
-    case "Boy":
-      boyNames.push(name);
-      break;
-    case "Pet":
-      petNames.push(name);
-      break;
-    default:
-      break;
+  // If the name doesn't exist, add it to the array and local storage
+  if (!nameExists) {
+    const listItem = document.createElement("div");
+    listItem.textContent = name;
+    nameList.appendChild(listItem);
+
+    // Add the new name to the corresponding array
+    switch (type) {
+      case "Girl":
+        girlNames.push(name);
+        localStorage.setItem("Girl", JSON.stringify(girlNames));
+        break;
+      case "Boy":
+        boyNames.push(name);
+        localStorage.setItem("Boy", JSON.stringify(boyNames));
+        break;
+      case "Pet":
+        petNames.push(name);
+        localStorage.setItem("Pet", JSON.stringify(petNames));
+        break;
+      default:
+        break;
+    }
   }
-
-  // Save the updated names array to local storage
-  saveNamesToLocalStorage();
-
-  // Append the new name to the nameList only if it was added by the user
-  nameList.appendChild(listItem);
-}
-
-// Function to save the names arrays to local storage
-function saveNamesToLocalStorage() {
-  localStorage.setItem("Girl", JSON.stringify(girlNames));
-  localStorage.setItem("Boy", JSON.stringify(boyNames));
-  localStorage.setItem("Pet", JSON.stringify(petNames));
 }
 
 // Populate the name list when the app loads
 function populateNameList() {
+  const nameList = document.getElementById("nameList");
+
   // Clear the nameList before repopulating it
   nameList.innerHTML = "";
 
+  // Function to add a name to the nameList
+  function addNameToNameList(name) {
+    const listItem = document.createElement("div");
+    listItem.textContent = name;
+    nameList.appendChild(listItem);
+  }
+
   if (localStorage.getItem("Girl")) {
-    const girlNames = JSON.parse(localStorage.getItem("Girl"));
-    girlNames.forEach((name) => {
+    const girlNamesFromStorage = JSON.parse(localStorage.getItem("Girl"));
+    girlNamesFromStorage.forEach((name) => {
       // Only add names to the nameList that were added by the user
       if (!girlNames.includes(name)) {
-        addNameToList(name, "Girl");
+        addNameToNameList(name);
       }
     });
   }
 
   if (localStorage.getItem("Boy")) {
-    const boyNames = JSON.parse(localStorage.getItem("Boy"));
-    boyNames.forEach((name) => {
+    const boyNamesFromStorage = JSON.parse(localStorage.getItem("Boy"));
+    boyNamesFromStorage.forEach((name) => {
       // Only add names to the nameList that were added by the user
       if (!boyNames.includes(name)) {
-        addNameToList(name, "Boy");
+        addNameToNameList(name);
       }
     });
   }
 
   if (localStorage.getItem("Pet")) {
-    const petNames = JSON.parse(localStorage.getItem("Pet"));
-    petNames.forEach((name) => {
+    const petNamesFromStorage = JSON.parse(localStorage.getItem("Pet"));
+    petNamesFromStorage.forEach((name) => {
       // Only add names to the nameList that were added by the user
       if (!petNames.includes(name)) {
-        addNameToList(name, "Pet");
+        addNameToNameList(name);
       }
     });
   }
