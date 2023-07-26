@@ -9,10 +9,10 @@ body {
   background-color: rgb(201, 146, 78);
   font-family: "Mukta Vaani", sans-serif;
   font-family: "Viga", sans-serif;
-  margin: 0 auto;
-  transform: scale(1.4); /* Increase everything by 10% */
-  padding-top: 7.5em;
+  margin: 0;
+  padding-top: 10rem; /* Adjust the padding as needed */
   overflow-x: hidden;
+  transform: scale(1.4); /* Increase everything by 40% */
 }
 
 h1 {
