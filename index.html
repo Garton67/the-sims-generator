@@ -39,6 +39,18 @@
       <button class="btn btn-primary" id="generatePet">
         <span class="emoji">Generate Pet Name 🐱</span>
       </button>
+      <form id="nameForm">
+        <label for="nameInput">Enter Name:</label>
+        <input type="text" id="nameInput" required />
+        <label for="nameType">Select Name Type:</label>
+        <select id="nameType" required>
+          <option value="Girl">Girl</option>
+          <option value="Boy">Boy</option>
+          <option value="Pet">Pet</option>
+        </select>
+        <button type="submit">Add Name</button>
+      </form>
+      <div id="nameList"></div>
     </div>
     <div class="blob"></div>
     <script src="app.js"></script>

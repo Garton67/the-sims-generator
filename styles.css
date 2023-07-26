@@ -74,6 +74,42 @@ lottie-player {
   font-size: 1.25em;
 }
 
+#nameForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#nameForm label {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+#nameForm input[type="text"],
+#nameForm select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 250px;
+}
+
+#nameForm button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#nameForm button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
 /* Media Queries */
 @media only screen and (max-width: 768px) {
   body {
@@ -84,4 +120,23 @@ lottie-player {
   .btn-primary {
     padding: 0.25em; /* Adjust the padding for smaller screens */
   }
+}
+
+#nameList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 19rem;
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#nameList > div {
+  padding: 0.5rem 1rem;
+  font-size: 1.2em;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
 }
