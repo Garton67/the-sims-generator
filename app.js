@@ -138,6 +138,6 @@ const animItem = bodymovin.loadAnimation({
   wrapper: svgContainer,
   animType: "svg",
   loop: false,
-  autoplay: falaaase,
+  autoplay: false,
   path: "https://assets2.lottiefiles.com/packages/lf20_u4yrau.json",
 });
