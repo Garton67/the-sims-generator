@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: rgb(248, 172, 78);
+  background-color: rgb(201, 146, 78);
   font-family: "Mukta Vaani", sans-serif;
   font-family: "Viga", sans-serif;
   margin: 0 auto;
@@ -22,9 +22,12 @@ h1 {
 }
 
 #random-name {
-  font-size: 1.7em;
+  font-family: "Mukta Vaani", sans-serif;
+  font-family: "Viga", sans-serif;
+  font-size: 1.8em;
   margin: 0 auto;
   padding: 0.9em;
+  color: rgb(0, 0, 0);
 }
 
 .container > h1 {
@@ -37,7 +40,6 @@ lottie-player {
 }
 
 .btn-primary {
-  background-image: url("/images/backgroundimg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   width: 12em;
@@ -45,7 +47,7 @@ lottie-player {
   font-family: "Mukta Vaani", sans-serif;
   font-family: "Viga", sans-serif;
   margin-top: 2em;
-  padding: 1em;
+  padding: 0.25em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -55,7 +57,7 @@ lottie-player {
 
 .btn-primary:hover {
   background-color: green;
-  transform: scale(1.35);
+  transform: scale(1.115);
 }
 
 .btn-primary:active {
