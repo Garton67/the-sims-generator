@@ -74,6 +74,10 @@ lottie-player {
   font-size: 1.25em;
 }
 
+.coming-soon span {
+  color: grey;
+}
+
 #nameForm {
   margin-top: 20px;
   display: flex;
@@ -89,7 +93,7 @@ lottie-player {
 #nameForm input[type="text"],
 #nameForm select {
   padding: 8px 12px;
-  font-size: 16px;
+  font-size: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -98,7 +102,7 @@ lottie-player {
 
 #nameForm button[type="submit"] {
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 18px;
   background-color: #007bff;
   color: #fff;
   border: none;
